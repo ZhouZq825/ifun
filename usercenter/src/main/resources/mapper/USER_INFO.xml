@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 用户授信流水映射 -->
+<mapper namespace="com.pro.ifun.usercenter.dao.UserInfoDao">
+    <insert id="saveUserInfo" useGeneratedKeys="true" keyProperty="vo.userId">
+        INSERT INTO shiro.USER_INFO (
+          username,
+          password
+        ) VALUES (
+          #{vo.username},
+          #{vo.password}
+        )
+    </insert>
+</mapper>
